@@ -1,29 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 // import Footer from "./Components/Footer";
 import Error from "./Components/Error";
 import Logements from "./Pages/logements";
+import UseFetch from "./Utils/useFetch";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-   
-body {
-  margin: 40px 100px;
-}
-`;
+import "./SASS/main.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <GlobalStyle />
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/APropos" element={<Home />}></Route>
         <Route path="/Logement/:id" element={<Logements />}></Route>
         <Route path="/*" element={<Error />}></Route>
       </Routes>

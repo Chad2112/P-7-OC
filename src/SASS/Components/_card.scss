@@ -1,0 +1,25 @@
+.card {
+    height: 340px;
+        width: 340px;
+   
+   
+
+        &__img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+}
+
+.Card__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 30px;
+    height: 2304px;
+        width: 100%;
+
+}

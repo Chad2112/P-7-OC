@@ -1,10 +1,10 @@
 import logofooter from "../Assets/D_Footer.png";
-import "../Style/Footer.css";
+import "../Style/SASS/main.css";
 
 function Footer() {
   return (
-    <div className="kasa-footer">
-      <img className="kasa-footer-img" src={logofooter} alt="Logo footer"></img>
+    <div className="footer">
+      <img className="footer__img" src={logofooter} alt="Logo footer"></img>
     </div>
   );
 }

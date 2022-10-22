@@ -1,31 +1,28 @@
 import logo from "../Assets/logo.svg";
 import { Link } from "react-router-dom";
-import "../Style/Header.css";
-import "../utils/colors";
-import styled from "styled-components";
-import colors from "../utils/colors";
+import "../SASS/main.css";
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: ${colors.primary};
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-`;
+const URL = window.location.pathname;
+console.log(URL);
 
 function Header() {
   return (
-    <div className="kasa-header">
-      <div className="kasa-header-box-img">
+    <div className="header">
+      <div className="header__box__img">
         <img src={logo} alt="logo"></img>
       </div>
-      <nav className="kasa-header-nav">
-        <ul className="kasa-header-nav-list">
+      <nav className="header__nav">
+        <ul className="header__nav__list">
           <li>
-            <StyledLink to="/">Acceuil</StyledLink>
+            <Link className="header__nav__list__link" to="/">
+              Accueil
+            </Link>
           </li>
+
           <li>
-            <StyledLink to="/APropos">A Propos</StyledLink>
+            <Link className="header__nav__list__link" to="/APropos">
+              A Propos
+            </Link>
           </li>
         </ul>
       </nav>
