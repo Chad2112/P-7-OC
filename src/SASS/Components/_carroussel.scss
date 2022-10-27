@@ -1,0 +1,43 @@
+.carroussel {
+    display: flex;
+    justify-content: center;
+    margin: 30px 100px;
+
+
+    &__container {
+    position: relative;
+    height: 415px;
+    width: 1240px;
+
+    &__btn__right {
+        position:absolute;
+        right: 0%;
+        top: 40%;
+        padding: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    }
+
+    &__btn__left{
+        position:absolute;
+        left: 0%;
+        top: 40%;
+        padding: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    }
+    &__img {
+       height: 100%;
+       object-fit: cover;
+       width: 100%;
+       border-radius: 25px;
+
+
+
+}
+    }
+}

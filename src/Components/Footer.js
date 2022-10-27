@@ -1,5 +1,5 @@
 import logofooter from "../Assets/D_Footer.png";
-import "../Style/SASS/main.css";
+import "../SASS/main.css";
 
 function Footer() {
   return (

@@ -1,11 +1,10 @@
-import BannerImg from "../Assets/Banner.png";
 import "../SASS/main.css";
 
-function Banner() {
+function Banner({ BannerCover, alt, title }) {
   return (
     <div className="Banner__content">
-      <img src={BannerImg} alt="Banière" className="Banner__content__img"></img>
-      <h1 className="Banner__content__title">Chez vous, partout et ailleurs</h1>
+      <img className="Banner__content__img" src={BannerCover} alt={alt}></img>
+      <h1 className="Banner__content__title">{title}</h1>
     </div>
   );
 }

@@ -1,23 +1,84 @@
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import UseFetch from "../Components/Fetch";
+import Carroussel from "../Components/Carroussel";
+import Collapse from "../Components/Collapse";
+import InformationDisplay from "../Components/informationlog";
 
-function Survey() {
-  const { questionNumber } = useParams();
-  const questionNumberInt = parseInt(questionNumber);
-  const questionPrecedente = questionNumberInt === 1 ? 1 : questionNumberInt - 1;
-  const quesionSuivante = questionNumberInt + 1;
+function Logements() {
+  const { locationData, isDataLoading } = UseFetch("../location.json");
+  const UrlId = useParams();
+  const logementsUrl = UrlId.logementsId;
+
+  let Data = [];
+
+  locationData.forEach((element) => {
+    if (element.id === logementsUrl) {
+      Data = [element];
+    }
+  });
+  console.log(Data);
+
+  const title = Data.reduce(
+    (acc, loc) => (acc.includes(loc.title) ? acc : acc.concat(loc.title)),
+    []
+  );
+  const location = Data.reduce(
+    (acc, loc) => (acc.includes(loc.location) ? acc : acc.concat(loc.location)),
+    []
+  );
+
+  const host = Data.reduce((acc, loc) => (acc.includes(loc.host) ? acc : acc.concat(loc.host)), []);
+
+  // Recuperation des photo a l'id voulu
+  const pictures = Data.reduce(
+    (acc, loc) => (acc.includes(loc.pictures) ? acc : acc.concat(loc.pictures)),
+    []
+  );
+
+  const description = Data.reduce(
+    (acc, loc) => (acc.includes(loc.description) ? acc : acc.concat(loc.description)),
+    []
+  );
+
+  // Recuperation des tags a l'id voulu
+  const tags = Data.reduce((acc, loc) => (acc.includes(loc.tags) ? acc : acc.concat(loc.tags)), []);
+  // Recuperation des equipements a l'id voulu
+  const equipments = Data.reduce(
+    (acc, loc) => (acc.includes(loc.equipments) ? acc : acc.concat(loc.equipments)),
+    []
+  );
+
   return (
-    <div>
-      <h1>Questionnaire 🧮</h1>
-      <h2>Question {questionNumber}</h2>
-      <Link to={`/survey/${questionPrecedente}`}>Précedent</Link>
-      {questionNumberInt === 10 ? (
-        <Link to="/results">Resultats</Link>
-      ) : (
-        <Link to={`/survey/${quesionSuivante}`}>Suivant</Link>
-      )}
+    <div className="main">
+      <Carroussel props={pictures} />
+
+      <InformationDisplay
+        key={logementsUrl}
+        title={title}
+        location={location}
+        tags={tags.map((tags) => (
+          <span className="information__content__tags__items">{tags}</span>
+        ))}
+        host={host.map((host) => (
+          <div className="host">
+            <span className="host__name">{host.name}</span>
+            <img className="host__img" src={host.picture} alt="profile"></img>
+          </div>
+        ))}
+      />
+
+      <section className="collapse collapse--logements">
+        <Collapse
+          key={logementsUrl}
+          title="Equipements"
+          text={equipments.map((equipments) => (
+            <li>{equipments}</li>
+          ))}
+        />
+        <Collapse title="Description" text={description} />
+      </section>
     </div>
   );
 }
 
-export default Survey;
+export default Logements;

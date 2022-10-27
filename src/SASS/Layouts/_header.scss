@@ -1,6 +1,18 @@
+
 .header {
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+
+&__content {
+    display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 1240px;
+    margin: 40px 100px 0px 100px;
     &__nav {
         width: 19%;
         text-decoration: none;
@@ -21,6 +33,7 @@
             }
         }
     }
+}
 }
 
 

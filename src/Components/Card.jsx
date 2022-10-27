@@ -1,15 +1,16 @@
 import location from "../location.json";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 import "../SASS/main.css";
 console.log(location);
 
-function Card({ title, cover, alt }) {
+function Card({ title, cover, alt, logementId }) {
   return (
-    <div className="card">
+    <Link to={`/logements/${logementId}`} className="card">
       <img className="card__img" src={cover} alt={alt}></img>
-
-      <p>{title}</p>
-    </div>
+      <div className="card__content__text">
+        <p className="card__content__text__text">{title}</p>
+      </div>
+    </Link>
   );
 }
 

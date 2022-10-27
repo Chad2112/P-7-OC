@@ -1,19 +1,23 @@
 import Banner from "../Components/Banner";
 import Card from "../Components/Card";
-import location from "../location.json";
+import ImgBanner from "../Assets/Banner.png";
+import UseFetch from "../Components/Fetch";
 import "../SASS/main.css";
-// import UseFetch from "../Utils/useFetch";
 
 function Home() {
-  // const [datas, isLoading] = UseFetch(`../location.json`);
-  // const ll = datas;
-  // console.log(ll);
+  const { locationData, isDataLoading } = UseFetch("../location.json");
   return (
-    <div>
-      <Banner></Banner>
+    <main className="main">
+      <Banner
+        BannerCover={ImgBanner}
+        alt="Bannière"
+        title="Chez vous, partout et ailleurs"
+      ></Banner>
       <section className="Card__content">
-        {location.map((logements) => (
+        {locationData.map((logements) => (
           <Card
+            Link
+            logementId={logements.id}
             key={logements.id}
             title={logements.title}
             cover={logements.cover}
@@ -21,7 +25,7 @@ function Home() {
           />
         ))}
       </section>
-    </div>
+    </main>
   );
 }
 
