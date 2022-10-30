@@ -17,6 +17,9 @@ WebFont.load({
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// let welcome = React.createElement("h1", { style: { color: "red" } }, `Welcome to react world`);
+
+// root.render(welcome, document.querySelector("#root"));
 root.render(
   <React.StrictMode>
     <Router>

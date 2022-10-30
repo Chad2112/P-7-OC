@@ -17,6 +17,9 @@ function Carroussel({ props }) {
     setcount(newIndex);
   };
 
+  const pictureNumber = count + 1;
+  const picturetotal = props.length;
+
   return (
     <div className="carroussel">
       <div className="carroussel__container">
@@ -28,6 +31,9 @@ function Carroussel({ props }) {
         </button>
 
         <img className="carroussel__container__img" src={picturesIndex} alt=""></img>
+        <span className="carroussel__container__img__number">
+          {pictureNumber}/{picturetotal}
+        </span>
       </div>
     </div>
   );

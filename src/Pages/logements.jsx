@@ -3,6 +3,11 @@ import UseFetch from "../Components/Fetch";
 import Carroussel from "../Components/Carroussel";
 import Collapse from "../Components/Collapse";
 import InformationDisplay from "../Components/informationlog";
+import { createElement } from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+import RatingDisplay from "../Components/Rating";
 
 function Logements() {
   const { locationData, isDataLoading } = UseFetch("../location.json");
@@ -16,7 +21,6 @@ function Logements() {
       Data = [element];
     }
   });
-  console.log(Data);
 
   const title = Data.reduce(
     (acc, loc) => (acc.includes(loc.title) ? acc : acc.concat(loc.title)),
@@ -54,6 +58,7 @@ function Logements() {
 
       <InformationDisplay
         key={logementsUrl}
+        props={Data}
         title={title}
         location={location}
         tags={tags.map((tags) => (

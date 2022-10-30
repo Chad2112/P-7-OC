@@ -1,10 +1,20 @@
 import logo from "../Assets/logo.svg";
 import { Link } from "react-router-dom";
 import "../SASS/main.css";
+import { useEffect } from "react";
+import styled from "styled-components";
 
 function Header() {
   const Url = window.location.pathname;
   console.log(Url);
+
+  const active = Url === "/";
+
+  console.log(active);
+
+  // const StyledLink = styled(Link)`
+  //   text-decoration: underline;
+  // `;
   return (
     <div className="header">
       <div className="header__content">

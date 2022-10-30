@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 0px 100px;
   width: 1240px;
 
@@ -34,6 +35,16 @@
         font-size: 14px;
         line-height: 142.6%;
       }
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: flex-end;
+    margin: 24px 0px 5px 0px;
+
+    img {
+      margin: 0% 1%;
     }
   }
 }

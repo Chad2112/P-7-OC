@@ -166,7 +166,7 @@ p {
   align-items: flex-start;
   justify-content: center;
   width: 1316px;
-  margin: 35px 100px;
+  margin: 0px 100px;
 }
 .collapse__content {
   width: 1240px;
@@ -257,11 +257,20 @@ p {
   width: 100%;
   border-radius: 25px;
 }
+.carroussel__container__img__number {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
 
 .information {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 0px 100px;
   width: 1240px;
 }
@@ -292,6 +301,14 @@ p {
   font-weight: 500;
   font-size: 14px;
   line-height: 142.6%;
+}
+.information__rating {
+  display: flex;
+  justify-content: flex-end;
+  margin: 24px 0px 5px 0px;
+}
+.information__rating img {
+  margin: 0% 1%;
 }
 
 .host {
