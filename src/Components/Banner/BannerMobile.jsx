@@ -1,6 +1,6 @@
-import "../SASS/main.css";
+import "../../SASS/main.css";
 
-function Banner({ BannerCover, alt, title }) {
+function BannerMobile({ BannerCover, alt, title }) {
   return (
     <div className="Banner__content">
       <img className="Banner__content__img" src={BannerCover} alt={alt}></img>
@@ -9,4 +9,4 @@ function Banner({ BannerCover, alt, title }) {
   );
 }
 
-export default Banner;
+export default BannerMobile;

@@ -4,6 +4,8 @@ import "../SASS/main.css";
 console.log(location);
 
 function Card({ title, cover, alt, logementId }) {
+  const idExist = logementId !== undefined;
+  console.log(idExist);
   return (
     <Link to={`/logements/${logementId}`} className="card">
       <img className="card__img" src={cover} alt={alt}></img>

@@ -16,7 +16,7 @@ width: 100%;
   }
 
   &__content {
-    width: 1240px;
+    width: 1023px;
     &--logements {
       margin: 35px 38px;
     }
@@ -24,7 +24,10 @@ width: 100%;
     &__boxtitle {
       display: flex;
       justify-content: center;
-
+      font-weight: 500;
+          font-size: 24px;
+          line-height: 142.6%;
+          color: white;
       bottom: 94.46%;
       height: 47px;
       width: 100%;
@@ -36,12 +39,6 @@ width: 100%;
         justify-content: space-between;
         align-items: center;
         width: 95%;
-        &__title {
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 142.6%;
-          color: white;
-        }
         &__btn {
           padding: 0%;
           border: none;

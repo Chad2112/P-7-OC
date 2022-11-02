@@ -9,7 +9,7 @@ function Collapse({ title, text, alt }) {
     <div className="collapse__content collapse__content--logements">
       <div className="collapse__content__boxtitle">
         <div className="collapse__content__boxtitle__element">
-          <div className="collapse__content__boxtitle__element__title">{title}</div>
+          <div>{title}</div>
           <button
             className="collapse__content__boxtitle__element__btn"
             onClick={() => isOpen(false)}
@@ -28,7 +28,7 @@ function Collapse({ title, text, alt }) {
     <div className="collapse__content collapse__content--logements">
       <div className="collapse__content__boxtitle">
         <div className="collapse__content__boxtitle__element">
-          <div className="collapse__content__boxtitle__element__title">{title}</div>
+          <div>{title}</div>
           <button
             className="collapse__content__boxtitle__element__btn"
             onClick={() => isOpen(true)}

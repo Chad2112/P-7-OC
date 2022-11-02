@@ -1,0 +1,237 @@
+@media only screen and (min-width: 768px) and (max-width: 1240px) {
+  /*---------------------------------------------------------------PAGE D'ACCUEIL----------------------------------------------------------------*/
+.main {
+  margin-bottom: 0%;
+}
+  .header__content {
+    max-width: 700px;
+    margin: 40px 0px 0px 0px;
+  }
+
+  .header__content__nav {
+    width: 32%;
+  }
+
+  .Banner__content__img {
+    max-width: 768px;
+  }
+
+  .Card__content {
+    max-width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 31px 0px;
+  }
+
+  .card {
+    width: 334px;
+    height: 334px;
+  }
+
+  /*---------------------------------------------------------------PAGE LOGEMENTS----------------------------------------------------------------*/
+
+  .carroussel__container {
+    max-width: 700px;
+  }
+
+  .information {
+    max-width: 700px;
+  }
+
+  .collapse--logements {
+    max-width: 768px;
+    margin: 0%;
+    justify-content: space-around;
+  }
+
+  .information__rating img {
+    margin: 0%;
+  }
+
+  .collapse__content {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .header__content {
+    max-width: 335px;
+    margin: 40px 0px 0px 0px;
+
+    &__box__img {
+      width: 145px;
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+
+  .header__content__nav {
+    width: 44%;
+
+    &__list__link {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .Banner {
+    max-width: 335px;
+    height: 111px;
+    margin-top: 19px;
+
+    &--aPropos {
+      max-width: 335px;
+      height: 225px;
+      margin-top: 19px;
+      margin-bottom: 9px;
+    }
+
+    &__content {
+      margin-top: 0px;
+      width: 100%;
+      height: 100%;
+
+      &__title {
+        font-size: 24px;
+        white-space: normal;
+        left: 7%;
+        width: 65%;
+        bottom: 18%;
+      }
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .Card__content {
+    max-width: 334px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 31px 0px;
+    background-color: white;
+    margin-top: 22px;
+    padding: 0px;
+  }
+
+  .card {
+    width: 335px;
+    height: 255px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  /*---------------------------------------------------------------PAGE LOGEMENTS----------------------------------------------------------------*/
+
+  .information {
+    max-width: 335px;
+    flex-direction: column;
+    margin-bottom: 6px;
+
+    &__content {
+      width: 100%;
+      &__title {
+        font-size: 18px;
+      }
+      &__location {
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+
+      &__tags__items {
+        font-size: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+        width: 84px;
+        height: 18px;
+        text-align: center;
+        padding: 2px 0px;
+        border-radius: 5px;
+      }
+    }
+    &__host {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    &__rating {
+      margin: 0px;
+      justify-content: flex-start;
+      width: 50%;
+    }
+    &__rating img {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+    }
+  }
+
+  .host {
+    &__img {
+      height: 32px;
+    }
+    &__name {
+      font-size: 12px;
+    }
+  }
+
+  .carroussel {
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    &__container {
+      max-width: 335px;
+      max-height: 255px;
+
+      &__btn__right {
+        top: 49%;
+      }
+      &__btn__left {
+        top: 49%;
+      }
+      &__btn__right img {
+        height: 19px;
+      }
+      &__btn__left img {
+        height: 19px;
+      }
+    }
+  }
+
+  .collapse--logements {
+    max-width: 334px;
+    margin: 0%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .collapse__content {
+    max-width: 335px;
+    &--logements {
+      margin: 10px 0px;
+    }
+    &__boxtitle {
+      font-size: 13px;
+      height: 30px;
+
+      &__element__btn img {
+        width: 15px;
+        height: 9px;
+      }
+    }
+    &__boxtext__text {
+      font-size: 12px;
+      margin: 17px 7px 52px 11px;
+    }
+  }
+}

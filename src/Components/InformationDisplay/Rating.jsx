@@ -1,5 +1,5 @@
-import stars from "../Assets/rating.png";
-import starsGrey from "../Assets/starsGrey.png";
+import stars from "../../Assets/rating.png";
+import starsGrey from "../../Assets/starsGrey.png";
 
 function RatingDisplay({ props }) {
   const rating = props.reduce(
@@ -11,13 +11,11 @@ function RatingDisplay({ props }) {
 
   const img = [];
   for (let i = 0; i < ratingInt; i++) {
-    img.push(<img src={stars} />);
+    img.push(<img key={img} src={stars} alt="Etoile rempli" />);
   }
-
   for (let i = ratingInt; i < 5; i++) {
-    img.push(<img src={starsGrey} />);
+    img.push(<img key={img} src={starsGrey} alt="Etoile vide" />);
   }
-
   return <div className="information__rating">{img}</div>;
 }
 

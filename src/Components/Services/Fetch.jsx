@@ -11,6 +11,7 @@ function UseFetch() {
       .then((response) => response.json())
       .then((locationData) => {
         setLocationData(locationData).catch((error) => console.log(error));
+        setDataLoading(true);
       })
       .catch((err) => console.log(err));
   }, [logementsUrl]);

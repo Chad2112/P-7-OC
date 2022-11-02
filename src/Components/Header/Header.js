@@ -1,8 +1,6 @@
-import logo from "../Assets/logo.svg";
+import logo from "../../Assets/.LOGO.png";
 import { Link } from "react-router-dom";
-import "../SASS/main.css";
-import { useEffect } from "react";
-import styled from "styled-components";
+import "../../SASS/main.css";
 
 function Header() {
   const Url = window.location.pathname;
@@ -10,16 +8,11 @@ function Header() {
 
   const active = Url === "/";
 
-  console.log(active);
-
-  // const StyledLink = styled(Link)`
-  //   text-decoration: underline;
-  // `;
   return (
     <div className="header">
       <div className="header__content">
         <div className="header__content__box__img">
-          <img src={logo} alt="logo"></img>
+          <img className="header__content__box__img__img" src={logo} alt="logo"></img>
         </div>
         <nav className="header__content__nav">
           <ul className="header__content__nav__list">

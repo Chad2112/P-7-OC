@@ -13,12 +13,12 @@
   margin: 40px 100px 0px 100px;
 }
 .header__content__nav {
-  width: 19%;
+  width: 20%;
   text-decoration: none;
 }
 .header__content__nav__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0%;
   list-style-type: none;
   white-space: nowrap;
@@ -30,10 +30,23 @@
   font-size: 24px;
   line-height: 142.6%;
 }
+.header__content__box__img__img {
+  width: 210px;
+}
 
-.footer__img {
+.footer {
+  position: relative;
+  width: 100%;
+  height: 209px;
+}
+.footer__content {
+  width: 100%;
+}
+.footer__content__img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  bottom: 0%;
 }
 
 .Banner__content {
@@ -101,7 +114,23 @@ p {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 0px 100px 40px 100px;
+  margin: 0px 100px 100px 100px;
+}
+
+.loader {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+
+.loader > .loader__circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 150px 10px;
+  border-radius: 50%;
+  background: #FF6060;
+  -webkit-animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 .Card__content {
@@ -169,7 +198,7 @@ p {
   margin: 0px 100px;
 }
 .collapse__content {
-  width: 1240px;
+  width: 1023px;
 }
 .collapse__content--logements {
   margin: 35px 38px;
@@ -177,6 +206,10 @@ p {
 .collapse__content__boxtitle {
   display: flex;
   justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  color: white;
   bottom: 94.46%;
   height: 47px;
   width: 100%;
@@ -188,12 +221,6 @@ p {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-}
-.collapse__content__boxtitle__element__title {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 142.6%;
-  color: white;
 }
 .collapse__content__boxtitle__element__btn {
   padding: 0%;
@@ -328,4 +355,240 @@ p {
   color: #FF6060;
   text-align: end;
   margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1240px) {
+  /*---------------------------------------------------------------PAGE D'ACCUEIL----------------------------------------------------------------*/
+  .main {
+    margin-bottom: 0%;
+  }
+  .header__content {
+    max-width: 700px;
+    margin: 40px 0px 0px 0px;
+  }
+  .header__content__nav {
+    width: 32%;
+  }
+  .Banner__content__img {
+    max-width: 768px;
+  }
+  .Card__content {
+    max-width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 31px 0px;
+  }
+  .card {
+    width: 334px;
+    height: 334px;
+  }
+  /*---------------------------------------------------------------PAGE LOGEMENTS----------------------------------------------------------------*/
+  .carroussel__container {
+    max-width: 700px;
+  }
+  .information {
+    max-width: 700px;
+  }
+  .collapse--logements {
+    max-width: 768px;
+    margin: 0%;
+    justify-content: space-around;
+  }
+  .information__rating img {
+    margin: 0%;
+  }
+  .collapse__content {
+    max-width: 768px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    margin: 0px 0px 50px 0px;
+  }
+  .header__content {
+    max-width: 335px;
+    margin: 40px 0px 0px 0px;
+  }
+  .header__content__box__img {
+    width: 145px;
+  }
+  .header__content__box__img__img {
+    width: 100%;
+  }
+  .header__content__nav {
+    width: 44%;
+  }
+  .header__content__nav__list__link {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .Banner {
+    max-width: 335px;
+    height: 111px;
+    margin-top: 19px;
+  }
+  .Banner--aPropos {
+    max-width: 335px;
+    height: 225px;
+    margin-top: 19px;
+    margin-bottom: 9px;
+  }
+  .Banner__content {
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .Banner__content__title {
+    font-size: 24px;
+    white-space: normal;
+    left: 7%;
+    width: 65%;
+    bottom: 18%;
+  }
+  .Banner__content__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .Card__content {
+    max-width: 334px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 31px 0px;
+    background-color: white;
+    margin-top: 22px;
+    padding: 0px;
+  }
+  .card {
+    width: 335px;
+    height: 255px;
+    margin: 0px 0px 20px 0px;
+  }
+  /*---------------------------------------------------------------PAGE LOGEMENTS----------------------------------------------------------------*/
+  .information {
+    max-width: 335px;
+    flex-direction: column;
+    margin-bottom: 6px;
+  }
+  .information__content {
+    width: 100%;
+  }
+  .information__content__title {
+    font-size: 18px;
+  }
+  .information__content__location {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .information__content__tags__items {
+    font-size: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    width: 84px;
+    height: 18px;
+    text-align: center;
+    padding: 2px 0px;
+    border-radius: 5px;
+  }
+  .information__host {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+  .information__rating {
+    margin: 0px;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  .information__rating img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  .host__img {
+    height: 32px;
+  }
+  .host__name {
+    font-size: 12px;
+  }
+  .carroussel {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .carroussel__container {
+    max-width: 335px;
+    max-height: 255px;
+  }
+  .carroussel__container__btn__right {
+    top: 49%;
+  }
+  .carroussel__container__btn__left {
+    top: 49%;
+  }
+  .carroussel__container__btn__right img {
+    height: 19px;
+  }
+  .carroussel__container__btn__left img {
+    height: 19px;
+  }
+  .collapse--logements {
+    max-width: 334px;
+    margin: 0%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .collapse__content {
+    max-width: 335px;
+  }
+  .collapse__content--logements {
+    margin: 10px 0px;
+  }
+  .collapse__content__boxtitle {
+    font-size: 13px;
+    height: 30px;
+  }
+  .collapse__content__boxtitle__element__btn img {
+    width: 15px;
+    height: 9px;
+  }
+  .collapse__content__boxtext__text {
+    font-size: 12px;
+    margin: 17px 7px 52px 11px;
+  }
+}
+@-webkit-keyframes lds-circle {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+            animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+@keyframes lds-circle {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+            animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
 }/*# sourceMappingURL=main.css.map */

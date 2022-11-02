@@ -1,12 +1,22 @@
-import Banner from "../Components/Banner";
+import Banner from "../Components/Banner/Banner";
 import Collapse from "../Components/Collapse";
 import bannerApropos from "../Assets/BanniereAPropos.png";
+import bannerAproposMobile from "../Assets/BanniereAProposMobile.png";
 import "../SASS/main.css";
 
 function Apropos() {
+  const use = window.screen.width;
+  const mobileScreen = use <= 792;
+
   return (
     <div className="main">
-      <Banner BannerCover={bannerApropos}></Banner>
+      <div className="Banner--aPropos">
+        {mobileScreen ? (
+          <Banner style={{ height: "3000" }} BannerCover={bannerAproposMobile}></Banner>
+        ) : (
+          <Banner BannerCover={bannerApropos}></Banner>
+        )}
+      </div>
       <section className="collapse">
         <Collapse
           title="Fiabilité"

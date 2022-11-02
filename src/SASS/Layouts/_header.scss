@@ -14,12 +14,12 @@
     width: 1240px;
     margin: 40px 100px 0px 100px;
     &__nav {
-        width: 19%;
+        width: 20%;
         text-decoration: none;
     
         &__list {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 0%;
             list-style-type: none;
             white-space: nowrap;
@@ -32,6 +32,9 @@
             
             }
         }
+    }
+    &__box__img__img {
+        width: 210px;
     }
 }
 }

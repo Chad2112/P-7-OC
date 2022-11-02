@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import WebFont from "webfontloader";
 import Home from "./Pages/Home";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 import Apropos from "./Pages/Apropos";
-import Error from "./Components/Error";
+import Error from "./Pages/Error";
 import Logements from "./Pages/logements";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./SASS/main.css";
@@ -17,9 +17,6 @@ WebFont.load({
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// let welcome = React.createElement("h1", { style: { color: "red" } }, `Welcome to react world`);
-
-// root.render(welcome, document.querySelector("#root"));
 root.render(
   <React.StrictMode>
     <Router>
@@ -29,6 +26,7 @@ root.render(
         <Route path="/APropos" element={<Apropos />}></Route>
         <Route path="/logements/:logementsId" element={<Logements />}></Route>
         <Route path="/*" element={<Error />}></Route>
+        <Route path="/logements/*" element={<Error />}></Route>
       </Routes>
       <Footer />
     </Router>

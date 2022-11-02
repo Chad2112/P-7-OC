@@ -1,40 +1,41 @@
-import Banner from "../Components/Banner";
+import Banner from "../Components/Banner/Banner";
 import Card from "../Components/Card";
 import ImgBanner from "../Assets/Banner.png";
-import UseFetch from "../Components/Fetch";
+import UseFetch from "../Components/Services/Fetch";
 import "../SASS/main.css";
 
 function Home() {
   const { locationData, isDataLoading } = UseFetch("../location.json");
   return (
     <main className="main">
-      <Banner
-        BannerCover={ImgBanner}
-        alt="Bannière"
-        title="Chez vous, partout et ailleurs"
-      ></Banner>
-      <section className="Card__content">
-        {locationData.map((logements) => (
-          <Card
-            Link
-            logementId={logements.id}
-            key={logements.id}
-            title={logements.title}
-            cover={logements.cover}
-            alt={logements.title}
-          />
-        ))}
-      </section>
+      {isDataLoading ? (
+        <div className="loader">
+          <div className="loader__circle"></div>
+        </div>
+      ) : (
+        <main className="main">
+          <div className="Banner">
+            <Banner
+              BannerCover={ImgBanner}
+              alt="Bannière"
+              title="Chez vous, partout et ailleurs"
+            ></Banner>
+          </div>
+          <section className="Card__content">
+            {locationData.map((logements) => (
+              <Card
+                logementId={logements.id}
+                key={logements.id}
+                title={logements.title}
+                cover={logements.cover}
+                alt={logements.title}
+              />
+            ))}
+          </section>
+        </main>
+      )}
     </main>
   );
 }
 
 export default Home;
-
-// <div>
-//       <CardsContainer>
-//         {location.map((logements, id) => (
-//           <div key={logements.id} name={logements.title} cover={logements.cover} />
-//         ))}
-//       </CardsContainer>
-//     </div>
