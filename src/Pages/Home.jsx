@@ -15,21 +15,11 @@ function Home() {
       ) : (
         <main className="main">
           <div className="Banner">
-            <Banner
-              BannerCover={ImgBanner}
-              alt="Bannière"
-              title="Chez vous, partout et ailleurs"
-            ></Banner>
+            <Banner BannerCover={ImgBanner} alt="Bannière" title="Chez vous, partout et ailleurs"></Banner>
           </div>
           <section className="Card__content">
             {locationData.map((logements) => (
-              <Card
-                logementId={logements.id}
-                key={logements.id}
-                title={logements.title}
-                cover={logements.cover}
-                alt={logements.title}
-              />
+              <Card logementId={logements.id} key={logements.id} title={logements.title} cover={logements.cover} alt={logements.title} />
             ))}
           </section>
         </main>

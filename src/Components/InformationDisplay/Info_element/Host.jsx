@@ -3,7 +3,6 @@ function Host({ props }) {
     (acc, loc) => (acc.includes(loc.host) ? acc : acc.concat(loc.host)),
     []
   );
-  console.log(host);
   return (
     <div>
       {host.map((host, index) => (

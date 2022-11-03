@@ -3,7 +3,6 @@ function Tags({ props }) {
     (acc, loc) => (acc.includes(loc.tags) ? acc : acc.concat(loc.tags)),
     []
   );
-  console.log(tags);
   return (
     <div className="information__content__tags">
       {tags.map((tags, index) => (

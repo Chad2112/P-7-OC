@@ -1,12 +1,9 @@
-import location from "../location.json";
 import { Link } from "react-router-dom";
 import "../SASS/main.css";
-console.log(location);
 
 function Card({ title, cover, alt, logementId }) {
-  const idExist = logementId !== undefined;
-  console.log(idExist);
   return (
+    //Ajout de l'ID du logement dans le lien de la card pour le recuperer ensuite sur la page logement
     <Link to={`/logements/${logementId}`} className="card">
       <img className="card__img" src={cover} alt={alt}></img>
       <div className="card__content__text">
@@ -17,11 +14,3 @@ function Card({ title, cover, alt, logementId }) {
 }
 
 export default Card;
-
-// <div>
-//       <CardsContainer>
-//         {location.map((logements, id) => (
-//           <div key={logements.id} name={logements.title} cover={logements.cover} />
-//         ))}
-//       </CardsContainer>
-//     </div>

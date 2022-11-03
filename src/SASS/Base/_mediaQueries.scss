@@ -50,6 +50,10 @@
   .collapse__content {
     max-width: 768px;
   }
+
+  .footer {
+    height: 180px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -234,4 +238,8 @@
       margin: 17px 7px 52px 11px;
     }
   }
+  .footer {
+    height: 209px;
+  }
+
 }

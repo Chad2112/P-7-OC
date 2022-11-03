@@ -5,17 +5,15 @@ import bannerAproposMobile from "../Assets/BanniereAProposMobile.png";
 import "../SASS/main.css";
 
 function Apropos() {
+  // Détéction de la largeur de l'ecran
   const use = window.screen.width;
   const mobileScreen = use <= 792;
 
   return (
     <div className="main">
       <div className="Banner--aPropos">
-        {mobileScreen ? (
-          <Banner style={{ height: "3000" }} BannerCover={bannerAproposMobile}></Banner>
-        ) : (
-          <Banner BannerCover={bannerApropos}></Banner>
-        )}
+        {/* Si la largeur de l'ecran est inferieur a 792px on affiche l'image mobile */}
+        {mobileScreen ? <Banner BannerCover={bannerAproposMobile}></Banner> : <Banner BannerCover={bannerApropos}></Banner>}
       </div>
       <section className="collapse">
         <Collapse

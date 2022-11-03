@@ -1,15 +1,17 @@
 import "../../SASS/main.css";
 import React from "react";
-import RatingDisplay from "./Rating";
-import Host from "./Host";
-import Tags from "./Tags";
+import RatingDisplay from "./Info_element/Rating";
+import Host from "./Info_element/Host";
+import Tags from "./Info_element/Tags";
+import Title from "./Info_element/Title";
+import Location from "./Info_element/Location";
 
-function InformationDisplay({ title, location, props }) {
+function InformationDisplay({ props }) {
   return (
     <section className="information">
       <div className="information__content">
-        <h1 className="information__content__title">{title}</h1>
-        <h2 className="information__content__location">{location}</h2>
+        <Title props={props} />
+        <Location props={props} />
         <Tags props={props} />
       </div>
       <div className="information__host">

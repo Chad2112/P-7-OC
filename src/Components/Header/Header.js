@@ -1,12 +1,28 @@
 import logo from "../../Assets/.LOGO.png";
 import { Link } from "react-router-dom";
 import "../../SASS/main.css";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Header() {
-  const Url = window.location.pathname;
-  console.log(Url);
+  const [accueilActive, setAccueil] = useState(false);
+  const [AproposActive, setApropos] = useState(false);
+  const location = useLocation().pathname;
 
-  const active = Url === "/";
+  // Creation d'un useEffect pour verifier si on est sur la page d'accueil, A propos ou aucune des deux
+
+  useEffect(() => {
+    if (location === "/") {
+      setAccueil(true);
+      setApropos(false);
+    } else if (location === "/APropos") {
+      setApropos(true);
+      setAccueil(false);
+    } else {
+      setApropos(false);
+      setAccueil(false);
+    }
+  }, [location]);
 
   return (
     <div className="header">
@@ -17,15 +33,29 @@ function Header() {
         <nav className="header__content__nav">
           <ul className="header__content__nav__list">
             <li>
-              <Link className="header__content__nav__list__link" to="/">
-                Accueil
-              </Link>
+              {/* Si l'utilisateur est sur la page d'acceuil le lien correspondant est souligné */}
+              {accueilActive ? (
+                <Link style={{ textDecoration: "underline" }} className="header__content__nav__list__link" to="/">
+                  Accueil
+                </Link>
+              ) : (
+                <Link className="header__content__nav__list__link" to="/">
+                  Accueil
+                </Link>
+              )}
             </li>
 
             <li>
-              <Link className="header__content__nav__list__link" to="/APropos">
-                A Propos
-              </Link>
+              {/* Si l'utilisateur est sur la page a propos le lien correspondant est souligné */}
+              {AproposActive ? (
+                <Link style={{ textDecoration: "underline" }} className="header__content__nav__list__link" to="/Apropos">
+                  APropos
+                </Link>
+              ) : (
+                <Link className="header__content__nav__list__link" to="/APropos">
+                  APropos
+                </Link>
+              )}
             </li>
           </ul>
         </nav>

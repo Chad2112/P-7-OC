@@ -3,6 +3,7 @@ import arrowUpImg from "../Assets/ArrowUp.png";
 import arrowDownImg from "../Assets/ArrowDown.png";
 
 function Collapse({ title, text, alt }) {
+  // Creation d'un state pour ouvrir ou fermer l'onglet collapse
   const [open, isOpen] = useState(true);
 
   return open ? (
@@ -10,18 +11,13 @@ function Collapse({ title, text, alt }) {
       <div className="collapse__content__boxtitle">
         <div className="collapse__content__boxtitle__element">
           <div>{title}</div>
-          <button
-            className="collapse__content__boxtitle__element__btn"
-            onClick={() => isOpen(false)}
-          >
+          <button className="collapse__content__boxtitle__element__btn" onClick={() => isOpen(false)}>
             <img src={arrowUpImg} alt={alt}></img>
           </button>
         </div>
       </div>
       <div className="collapse__content__boxtext">
-        <div className="collapse__content__boxtext__text collapse__content__boxtext__text--equipments">
-          {text}
-        </div>
+        <div className="collapse__content__boxtext__text collapse__content__boxtext__text--equipments">{text}</div>
       </div>
     </div>
   ) : (
@@ -29,10 +25,7 @@ function Collapse({ title, text, alt }) {
       <div className="collapse__content__boxtitle">
         <div className="collapse__content__boxtitle__element">
           <div>{title}</div>
-          <button
-            className="collapse__content__boxtitle__element__btn"
-            onClick={() => isOpen(true)}
-          >
+          <button className="collapse__content__boxtitle__element__btn" onClick={() => isOpen(true)}>
             <img src={arrowDownImg} alt={alt}></img>
           </button>
         </div>

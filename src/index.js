@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Apropos from "./Pages/Apropos";
 import Error from "./Pages/Error";
 import Logements from "./Pages/logements";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./SASS/main.css";
 
 WebFont.load({
@@ -25,8 +25,8 @@ root.render(
         <Route path="/" element={<Home />}></Route>
         <Route path="/APropos" element={<Apropos />}></Route>
         <Route path="/logements/:logementsId" element={<Logements />}></Route>
-        <Route path="/*" element={<Error />}></Route>
-        <Route path="/logements/*" element={<Error />}></Route>
+        <Route path="/Error" element={<Error />}></Route>
+        <Route path="/*" element={<Navigate to="/Error" />} />
       </Routes>
       <Footer />
     </Router>
