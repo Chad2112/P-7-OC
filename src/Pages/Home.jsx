@@ -9,10 +9,6 @@ function Home() {
   return (
     <main className="main">
       {isDataLoading ? (
-        <div className="loader">
-          <div className="loader__circle"></div>
-        </div>
-      ) : (
         <main className="main">
           <div className="Banner">
             <Banner BannerCover={ImgBanner} alt="Bannière" title="Chez vous, partout et ailleurs"></Banner>
@@ -23,6 +19,10 @@ function Home() {
             ))}
           </section>
         </main>
+      ) : (
+        <div className="loader">
+          <div className="loader__circle"></div>
+        </div>
       )}
     </main>
   );

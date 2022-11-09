@@ -10,10 +10,13 @@ function UseFetch() {
     fetch(`../location.json`)
       .then((response) => response.json())
       .then((locationData) => {
-        setLocationData(locationData).catch((error) => console.log(error));
+        setLocationData(locationData);
         setDataLoading(true);
       })
-      .catch((err) => console.log(err));
+      .catch(() => {
+        console.log("err");
+        setDataLoading(false);
+      });
   }, [logementsUrl]);
   return { locationData, isDataLoading };
 }

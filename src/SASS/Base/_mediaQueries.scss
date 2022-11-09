@@ -242,4 +242,34 @@
     height: 209px;
   }
 
+  .Error__content
+{
+
+    margin-bottom: 156px;
+    height: 280px;
+
+
+    &__text{
+
+        max-width: 260px;
+        text-align: center;
+        font-size: 18px;
+        max-width: 300px;
+        
+
+
+
+    }
+
+    &__img {
+      max-width: 200px;
+    }
+
+    &__link {
+                font-size: 18px;
+                margin-top: 103px;
+
+    }
+}      
+
 }

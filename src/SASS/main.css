@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 .header {
   display: flex;
   justify-content: center;
@@ -80,6 +81,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 186px;
+  margin-bottom: 156px;
 }
 .Error__content__text {
   font-weight: 500;
@@ -562,6 +564,23 @@ p {
   }
   .footer {
     height: 209px;
+  }
+  .Error__content {
+    margin-bottom: 156px;
+    height: 280px;
+  }
+  .Error__content__text {
+    max-width: 260px;
+    text-align: center;
+    font-size: 18px;
+    max-width: 300px;
+  }
+  .Error__content__img {
+    max-width: 200px;
+  }
+  .Error__content__link {
+    font-size: 18px;
+    margin-top: 103px;
   }
 }
 @-webkit-keyframes lds-circle {

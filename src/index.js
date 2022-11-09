@@ -1,20 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import WebFont from "webfontloader";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Apropos from "./Pages/Apropos";
-import Error from "./Pages/Error";
 import Logements from "./Pages/logements";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Error from "./Pages/Error";
 import "./SASS/main.css";
-
-WebFont.load({
-  google: {
-    families: ["Montserrat", "sans-serif"],
-  },
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
