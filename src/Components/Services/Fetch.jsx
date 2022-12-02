@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+// import UseFetch from "../../../public/location.json";
 
 function UseFetch() {
   const [locationData, setLocationData] = useState([]);

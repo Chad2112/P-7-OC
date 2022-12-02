@@ -6,6 +6,7 @@ import "../SASS/main.css";
 
 function Home() {
   const { locationData, isDataLoading } = UseFetch("../location.json");
+  console.log(locationData);
   return (
     <main className="main">
       {isDataLoading ? (
